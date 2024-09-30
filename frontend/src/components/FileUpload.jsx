@@ -27,7 +27,7 @@ const FileUpload = () => {
     formData.append("file", file);
   
     try {
-      const res = await fetch("http://localhost:5000/api/upload", {
+      const res = await fetch("https://upload-and-preview-file.vercel.app", {
         method: "POST",
         body: formData,
       });
