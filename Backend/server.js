@@ -6,15 +6,15 @@ const sharp = require('sharp'); // Import sharp for image manipulation
 
 const app = express();
 const PORT = 5000;
-app.get("/" , (req, res)=>{
-  res.json('hello')
-})
 // CORS configuration
 app.use(cors({
   origin: 'https://upload-and-preview-file-lbmp.vercel.app', // Your React app's URL
   methods: ['GET', 'POST'], // Allowed methods
   credentials: true,
 }));
+app.get("/" , (req, res)=>{
+  res.json('hello')
+})
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
