@@ -2,14 +2,14 @@
 const express = require('express');
 const multer = require('multer');
 const cors = require('cors');
-const sharp = require('sharp'); // Import sharp for image manipulation
+const sharp = require('sharp'); 
 
 const app = express();
 const PORT = 5000;
 // CORS configuration
 app.use(cors({
-  origin: 'https://upload-and-preview-file-lbmp.vercel.app', // Your React app's URL
-  methods: ['GET', 'POST'], // Allowed methods
+  origin: 'https://upload-and-preview-file-lbmp.vercel.app', 
+  methods: ['GET', 'POST'],
   credentials: true,
 }));
 app.get("/" , (req, res)=>{
